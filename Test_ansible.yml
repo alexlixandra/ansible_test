@@ -16,5 +16,5 @@
 
      - name: Print mesaj
        ansible.builtin.debug:
-          msg: "Adresa IP a hostului este {{ item }}"
+          msg: "Adresa IP a hostului este {{ item[1] }}"
        loop: "{{ lista_ip }}"
