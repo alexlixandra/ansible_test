@@ -3,8 +3,17 @@
   hosts: echipamente
   become: true
 
+  vars:
+     lista_ip:
+        - 1.1.1.1
+        - 2.2.2.2
+        - 3.3.3.3
+        - 4.4.4.4
+        - 5.5.5.5
+        - 6.6.6.6
+
   tasks:
 
-      - name: Print mesaj
-        ansible.builtin.debug:
-            msg: "Mesaj pentru fiecare host"
+     - name: Print mesaj
+       ansible.builtin.debug:
+          msg: "Adresa IP a hostului {{ hosts }} este {{ lista_ip }}"
