@@ -4,5 +4,7 @@
   become: true
 
   tasks:
-  
-      - name: Verificare hosturi
+
+      - name: Print mesaj
+        ansible.builtin.debug:
+            msg: "Mesaj pentru fiecare host"
