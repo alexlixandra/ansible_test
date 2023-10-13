@@ -11,10 +11,10 @@
         - 4.4.4.4
         - 5.5.5.5
         - 6.6.6.6
+     index: "{{ groups.echipamente.index(inventory_hostname) }}"
 
   tasks:
 
      - name: Print mesaj
        ansible.builtin.debug:
-          msg: "Adresa IP a hostului este {{ item[1] }}"
-       loop: "{{ lista_ip }}"
+          msg: "Adresa IP a hostului este {{ lista_ip[index] }}"
