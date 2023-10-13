@@ -1,1 +1,7 @@
 ---
+- name: Dynamic IP Pool for hosts
+- hosts: echipamente
+- become: true
+
+- tasks:
+      - name: Verificare hosturi
